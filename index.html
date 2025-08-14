@@ -3,21 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Agente de IA</title>
+    <title>Excelsior Tech - Agente de IA</title>
+
+    <!-- Fuentes y librerías -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
+    <!-- Fondo dinámico -->
+    <div id="particles-js"></div>
+
+    <!-- Encabezado -->
+    <header class="animate__animated animate__fadeInDown">
       <img src="logo.png" alt="Excelsior Tech Logo" class="logo" />
+      <h1>Agente de Inteligencia Artificial</h1>
+      <p>Soluciones tecnológicas de última generación</p>
     </header>
 
+    <!-- Contenido principal -->
     <main>
-      <section id="agent-wrapper">
+      <section id="agent-wrapper" class="animate__animated animate__zoomIn">
         <div id="agent-container"></div>
       </section>
     </main>
 
-    <footer>© 2025</footer>
+    <!-- Footer -->
+    <footer class="animate__animated animate__fadeInUp">
+      © 2025 Excelsior Tech | Innovando con Inteligencia
+    </footer>
 
     <!-- Script del agente -->
     <script
@@ -30,5 +52,25 @@
       data-monitor="true"
       data-target-id="agent-container"
     ></script>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 60 },
+          color: { value: ["#29b6f6", "#ffffff"] },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 3 },
+          move: { enable: true, speed: 2 },
+        },
+        interactivity: {
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+          },
+        },
+      });
+    </script>
   </body>
 </html>
